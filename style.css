@@ -1,0 +1,129 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body 
+{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+    background: linear-gradient(#4568dc, #b06ab3);
+}
+.calculator 
+{
+    background: white;
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    align-items: center;
+    border-radius: 1rem;
+    padding: 25px;
+}
+.heading
+{
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 5.5vh;
+}
+.container 
+{
+    margin-left: 1.8em;
+    padding: 20px;
+    border-radius: 1rem;
+    padding: 25px;
+}
+.content 
+{
+    width: 100%;
+    margin-top: 1.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.row button 
+{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border-color: rgb(161, 161, 161);
+    outline: none;
+    margin: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    border-radius: 1rem;
+    background: linear-gradient(#6486f6, #f1a4f4);
+} 
+.row button:hover
+{
+    filter: brightness(0.85);
+}
+.display #screen 
+{
+    margin-bottom: .5em;
+    width: 655px;
+    height: 70px;
+    margin: 5px;
+    font-size: 35px;
+    outline: none;
+    border-color: rgb(147, 145, 145);
+    text-align: right;
+    padding-right: .5em;
+    background: linear-gradient(#6486f6, #f1a4f4);
+    border-radius: 1rem;
+    margin-bottom: 10px;
+}
+.dark-mode
+{
+    background: linear-gradient(#140e2c,#062fff, rgb(82, 82, 241), #140e2c);
+    
+}
+.wrapper-color-switch
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: -0.5em;
+}
+.color-switch
+{
+    width: 2em;
+    height: 1em;
+    border-radius: 10em;
+    position: absolute;
+    cursor: pointer;
+    background: linear-gradient(#0f0f0f, #48484a);
+}  
+.color-switch-toggle
+{
+    width: 0.9em;
+    height: 0.9em;
+    background: linear-gradient(white, rgb(189, 188, 188));
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    margin-top: 0.05em;
+    margin-left: 0.05em;
+}
+.color-switch::before
+{
+    position: absolute;
+    display: inline-block;
+    width: 12em;
+    top: 0.4em;
+}
+#input-color-switch:checked ~ label .color-switch-toggle 
+{
+    transform: translatex(1em);
+}
+
+#input-color-switch
+{
+    display: none; 
+}
