@@ -30,22 +30,6 @@ body
     padding-bottom: 15px;
     font-size: 5.5vh;
 }
-.container 
-{
-    margin-left: 1.8em;
-    padding: 20px;
-    border-radius: 1rem;
-    padding: 25px;
-}
-.content 
-{
-    width: 100%;
-    margin-top: 1.7em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 .row button 
 {
     width: 100px;
@@ -164,7 +148,7 @@ body
 }
 #clearHistory:hover, #closeHistory:hover
 {
-    filter: brightness
+    filter: brightness(0.85);
 }
 .back
 {
@@ -180,4 +164,56 @@ body
 {
     background: linear-gradient(rgb(251, 146, 97), rgb(248, 131, 77));
     box-shadow: 3px 3px rgb(244, 96, 28);
+}
+@media screen and (max-width: 800px) 
+{
+    .left, .main, .right 
+    {
+      width: 100%;
+    }
+    .heading
+    {
+        font-size: 14px;
+    }
+    .display #screen
+    {
+        width: 210px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .row button
+    {
+        width: 25px;
+        height: 20px;
+        font-size: 5.5px;
+    }
+    .calculator
+    {
+        width: 60%;
+        height: 35%;
+        position: absolute;
+        margin-top: -55vh;
+    }
+    #closeHistory, #clearHistory
+    {
+        width: 25px;
+        height: 15px;
+        font-size: 5.5px;
+        margin: 0px;
+        margin-left: 5px;
+    }
+    #clearHistory
+    {
+        margin-left: 20px
+    }
+    #historyContainer
+    {
+        margin: 0px;
+        width: 60%;
+        height: 25vh;
+        margin-top: 20vh;
+        position: relative;
+        font-size: 10px;
+        padding-top: 10px;
+    }
 }
