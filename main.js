@@ -51,8 +51,8 @@ function sin()
     his = screen.value;
     screen.value = eval(screen.value);
     let val = Math.sin(screen.value);
-    if (val > 1e-15) screen.value = val;
-    else screen.value = 0;
+    if (val < 1e-10) screen.value = 0;
+    else screen.value = val;
     historyString = 'sin(' + his + ') = ' + screen.value;
     document.getElementById("historyContent").innerHTML += historyString + "<br/>";
 }
@@ -61,7 +61,9 @@ function cos()
 {
     his = screen.value;
     screen.value = eval(screen.value);
-    screen.value = Math.cos(screen.value);
+    let val = Math.cos(screen.value);
+    if (val < 1e-10) screen.value = 0;
+    else screen.value = val;
     historyString = 'cos(' + his + ') = ' + screen.value;
     document.getElementById("historyContent").innerHTML += historyString + "<br/>";
 }
@@ -70,7 +72,9 @@ function tan()
 {
     his = screen.value;
     screen.value = eval(screen.value);
-    screen.value = Math.tan(screen.value);
+    let val = Math.tan(screen.value);
+    if (val < 1e-10) screen.value = 0;
+    else screen.value = val;
     historyString = 'tan(' + his + ') = ' + screen.value;
     document.getElementById("historyContent").innerHTML += historyString + "<br/>";
 }
@@ -89,7 +93,7 @@ function sqrt()
     his = screen.value;
     screen.value = eval(screen.value);
     screen.value = Math.sqrt(screen.value, 2);
-    historyString = '√' + his + ' = ' + screen.value;
+    historyString = '√(' + his + ') = ' + screen.value;
     document.getElementById("historyContent").innerHTML += historyString + "<br/>";
 }
 
@@ -123,7 +127,7 @@ function e()
     his = screen.value;
     screen.value = eval(screen.value);
     screen.value = Math.pow(2.71828182846, screen.value);
-    historyString = 'e^' + his + ' = ' + screen.value;
+    historyString = 'e^(' + his + ') = ' + screen.value;
     document.getElementById("historyContent").innerHTML += historyString + "<br/>";
 }
 
@@ -150,7 +154,7 @@ function x(i)
     his = screen.value;
     screen.value = eval(screen.value);
     screen.value = Math.pow(screen.value,i);
-    historyString = his + '^' + i + ' = ' + screen.value;
+    historyString = '(' + his + ')' + '^' + i + ' = ' + screen.value;
     document.getElementById("historyContent").innerHTML += historyString + "<br/>";
 }
 
