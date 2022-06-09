@@ -12,7 +12,7 @@ body
     align-items: center;
     min-height: 100vh;
     user-select: none;
-    background: linear-gradient(#4568dc, #b06ab3);
+    background: #6486f6;
 }
 .calculator 
 {
@@ -57,16 +57,17 @@ body
     border-radius: 4px;
     transition: .1s;
     border-radius: 1rem;
-    background: linear-gradient(#6486f6, #f1a4f4);
+    background: #6486f6;
+    box-shadow: 5px 5px rgb(52, 52, 107);
 } 
 .row button:hover
 {
-    filter: brightness(0.85);
+    filter: brightness(0.80);
 }
 .display #screen 
 {
     margin-bottom: .5em;
-    width: 655px;
+    width: 680px;
     height: 70px;
     margin: 5px;
     font-size: 35px;
@@ -74,13 +75,14 @@ body
     border-color: rgb(147, 145, 145);
     text-align: right;
     padding-right: .5em;
-    background: linear-gradient(#6486f6, #f1a4f4);
+    background: #6486f6;
     border-radius: 1rem;
     margin-bottom: 10px;
+    box-shadow: 5px 5px rgb(52, 52, 107);
 }
 .dark-mode
 {
-    background: linear-gradient(#140e2c,#062fff, rgb(82, 82, 241), #140e2c);
+    background: rgb(40, 40, 40);
     
 }
 .wrapper-color-switch
@@ -126,4 +128,56 @@ body
 #input-color-switch
 {
     display: none; 
+}
+.historyContainer
+{
+    background: white;
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    border-radius: 1rem;
+    padding: 25px;
+    width: 20%;
+    height: 590px;
+    margin-left: -300px;
+    margin-right: 35px;
+    text-align: left;
+    overflow: scroll;
+}
+.historyContent
+{
+    text-align: left;
+}
+#clearHistory, #closeHistory
+{
+    width: 50px;
+    height: 25px;
+    border-radius: 0.5rem;
+    background: #6486f6;
+    box-shadow: 3px 3px rgb(52, 52, 107);
+    font-weight: 200px;
+    margin-left: 5px;
+}
+#clearHistory
+{
+    margin-left: 50px;
+}
+#clearHistory:hover, #closeHistory:hover
+{
+    filter: brightness
+}
+.back
+{
+    width: 100px;
+    height: 30px;
+    border-radius: 0.5rem;
+    background: black;
+    box-shadow: 5px 5px rgb(52, 52, 107);
+    margin-bottom: 95vh;
+    color: white;
+}
+#diff
+{
+    background: linear-gradient(rgb(251, 146, 97), rgb(248, 131, 77));
+    box-shadow: 3px 3px rgb(244, 96, 28);
 }
