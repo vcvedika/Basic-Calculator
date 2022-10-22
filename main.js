@@ -78,11 +78,77 @@ function tan()
     historyString = 'tan(' + his + ') = ' + screen.value;
     document.getElementById("historyContent").innerHTML += historyString + "<br/>";
 }
-function arcsin() 
+
+function sinh() 
 {
     his = screen.value;
     screen.value = eval(screen.value);
-    let val = Math.asin(screen.value);
+    let val = Math.sinh(screen.value);
+    if (val < 1e-10) screen.value = 0;
+    else screen.value = val;
+    historyString = 'sinh(' + his + ') = ' + screen.value;
+    document.getElementById("historyContent").innerHTML += historyString + "<br/>";
+}
+
+function cosh() 
+{
+    his = screen.value;
+    screen.value = eval(screen.value);
+    let val = Math.cosh(screen.value);
+    if (val < 1e-10) screen.value = 0;
+    else screen.value = val;
+    historyString = 'cosh(' + his + ') = ' + screen.value;
+    document.getElementById("historyContent").innerHTML += historyString + "<br/>";
+}
+
+function tanh() 
+{
+    his = screen.value;
+    screen.value = eval(screen.value);
+    let val = Math.tanh(screen.value);
+    if (val < 1e-10) screen.value = 0;
+    else screen.value = val;
+    historyString = 'tanh(' + his + ') = ' + screen.value;
+    document.getElementById("historyContent").innerHTML += historyString + "<br/>";
+}
+
+function arcsinh() 
+{
+    his = screen.value;
+    screen.value = eval(screen.value);
+    let val = Math.asinh(screen.value);
+    if (val < 1e-10) screen.value = 0;
+    else screen.value = val;
+    historyString = 'asinh(' + his + ') = ' + screen.value;
+    document.getElementById("historyContent").innerHTML += historyString + "<br/>";
+}
+
+function arccosh() 
+{
+    his = screen.value;
+    screen.value = eval(screen.value);
+    let val = Math.acosh(screen.value);
+    if (val < 1e-10) screen.value = 0;
+    else screen.value = val;
+    historyString = 'acosh(' + his + ') = ' + screen.value;
+    document.getElementById("historyContent").innerHTML += historyString + "<br/>";
+}
+
+function arctanh() 
+{
+    his = screen.value;
+    screen.value = eval(screen.value);
+    let val = Math.asinh(screen.value);
+    if (val < 1e-10) screen.value = 0;
+    else screen.value = val;
+    historyString = 'atanh(' + his + ') = ' + screen.value;
+    document.getElementById("historyContent").innerHTML += historyString + "<br/>";
+}
+
+function arcsin() 
+{
+    his = screen.value;
+    let val = Math.asin(eval(screen.value));
     if (val < 1e-10) screen.value = 0;
     else screen.value = val;
     historyString = 'asin(' + his + ') = ' + screen.value;
@@ -91,8 +157,7 @@ function arcsin()
 function arccos() 
 {
     his = screen.value;
-    screen.value = eval(screen.value);
-    let val = Math.acos(screen.value);
+    let val = Math.acos(eval(screen.value));
     if (val < 1e-10) screen.value = 0;
     else screen.value = val;
     historyString = 'acos(' + his + ') = ' + screen.value;
@@ -101,8 +166,7 @@ function arccos()
 function arctan() 
 {
     his = screen.value;
-    screen.value = eval(screen.value);
-    let val = Math.atan(screen.value);
+    let val = Math.atan(eval(screen.value));
     if (val < 1e-10) screen.value = 0;
     else screen.value = val;
     historyString = 'atan(' + his + ') = ' + screen.value;
