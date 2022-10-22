@@ -78,6 +78,16 @@ function tan()
     historyString = 'tan(' + his + ') = ' + screen.value;
     document.getElementById("historyContent").innerHTML += historyString + "<br/>";
 }
+function arcsin() 
+{
+    his = screen.value;
+    screen.value = eval(screen.value);
+    let val = Math.asin(screen.value);
+    if (val < 1e-10) screen.value = 0;
+    else screen.value = val;
+    historyString = 'asin(' + his + ') = ' + screen.value;
+    document.getElementById("historyContent").innerHTML += historyString + "<br/>";
+}
 
 function pow() 
 {
@@ -130,17 +140,7 @@ function e()
     historyString = 'e^(' + his + ') = ' + screen.value;
     document.getElementById("historyContent").innerHTML += historyString + "<br/>";
 }
-function arcsin()
-{
-    his = screen.value;
-    screen.value = eval(screen.value);
-    let val= Math.asin(screen.value);
-    if (val < 1e-10) screen.value = 0;
-    else screen.value = val;
-    historyString = 'asin(' + his + ') = ' + screen.value;
-    document.getElementById("historyContent").innerHTML += historyString + "<br/>";
 
-}
 function factorial() 
 {
     his = screen.value;
