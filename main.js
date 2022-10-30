@@ -50,7 +50,7 @@ function sin()
 {
     his = screen.value;// obtained the value in a variable
     screen.value = eval(screen.value);
-    let val = Math.sin(screen.value);
+    let val = Math.sin(screen.value);// obtaing the sinosudal value of the variable
     if (val < 1e-10) screen.value = 0;
     else screen.value = val;
     historyString = 'sin(' + his + ') = ' + screen.value;
