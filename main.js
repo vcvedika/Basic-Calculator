@@ -48,7 +48,7 @@ function solve()
 
 function sin() 
 {
-    his = screen.value;
+    his = screen.value;// obtained the value in a variable
     screen.value = eval(screen.value);
     let val = Math.sin(screen.value);
     if (val < 1e-10) screen.value = 0;
